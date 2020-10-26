@@ -6,3 +6,7 @@
    SELECT 飼育県, COUNT(個体識別番号)
      FROM 個体識別
     GROUP BY 飼育県
+
+2. SELECT 飼育県 AS 都道府県名, 個体識別番号,
+     CASE 雌雄コード WHEN '1', THEN '雄'
+                   WHEN '2', THEN '雌' END AS 雌雄
