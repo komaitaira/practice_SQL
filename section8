@@ -4,3 +4,8 @@
      FROM 社員 AS S
      JOIN 部署 AS B
        ON S.部署 ID = B.部署 ID
+
+2. SELECT S1. 社員番号, S1.名前 AS 名前, S2.名前 AS 上司名
+     FROM 社員 AS S1
+     LEFT JOIN 社員 AS S2
+       ON S1. 上司ID = S2.社員番号
